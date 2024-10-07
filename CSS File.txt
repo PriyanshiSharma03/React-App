@@ -1,0 +1,68 @@
+/* src/Board.css */
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.winner {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+// src/App.js
+
+import React from 'react';
+import Board from './Board';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <Board />
+    </div>
+  );
+}
+
+export default App;
+/* src/App.css */
+
+.App {
+  text-align: center;
+}
+
